@@ -21,4 +21,4 @@ services:
       - ./app/media:/app/media
       - /etc/letsencrypt:/etc/letsencrypt:ro
     depends_on:
-      - atl-poligon-web
+      - atl-poligon-web 
