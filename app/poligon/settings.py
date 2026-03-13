@@ -17,7 +17,8 @@ SECRET_KEY = os.environ["DJANGO_SECRET_KEY"]
 DEBUG = os.environ.get("DJANGO_DEBUG", "false").lower() == "true"
 
 ALLOWED_HOSTS: list[str] = [
-      "37.1.208.252",
+    "127.0.0.1",
+    "37.1.208.252",
 ]
 CSRF_TRUSTED_ORIGINS = [
     "http://37.1.208.252:82",
