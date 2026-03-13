@@ -38,6 +38,7 @@ INSTALLED_APPS = [
     "corsheaders",
     "rest_framework",
     "rest_framework.authtoken",
+    "django_extensions",
     # apps
     "fake_message.apps.FakeMessageConfig",
 ]
