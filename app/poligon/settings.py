@@ -19,6 +19,10 @@ DEBUG = os.environ.get("DJANGO_DEBUG", "false").lower() == "true"
 ALLOWED_HOSTS: list[str] = [
       "37.1.208.252",
 ]
+CSRF_TRUSTED_ORIGINS = [
+    "http://37.1.208.252:82",
+]
+
 CORS_ALLOW_ALL_ORIGINS = True
 
 # Application definition
