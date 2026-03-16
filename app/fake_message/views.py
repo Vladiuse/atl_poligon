@@ -2,7 +2,7 @@ from common.auth import BearerAuthentication
 from django_filters.rest_framework import DjangoFilterBackend
 from rest_framework import mixins
 from rest_framework.authentication import SessionAuthentication
-from rest_framework.decorators import api_view
+from rest_framework.decorators import api_view, authentication_classes, permission_classes
 from rest_framework.pagination import PageNumberPagination
 from rest_framework.permissions import IsAuthenticated
 from rest_framework.request import Request
@@ -24,6 +24,8 @@ def api_root(request: Request) -> Response:
 
 
 @api_view(["GET"])
+@permission_classes([IsAuthenticated])
+@authentication_classes([BearerAuthentication, SessionAuthentication])
 def message_meta_data(request: Request) -> Response:
     _ = request
     data = {
