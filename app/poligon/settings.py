@@ -19,9 +19,12 @@ DEBUG = os.environ.get("DJANGO_DEBUG", "false").lower() == "true"
 ALLOWED_HOSTS: list[str] = [
     "127.0.0.1",
     "37.1.208.252",
+    "atl-fake-messages.vim-store.ru",
 ]
 CSRF_TRUSTED_ORIGINS = [
     "http://37.1.208.252:82",
+    "http://atl-fake-messages.vim-store.ru",
+    "https://atl-fake-messages.vim-store.ru",
 ]
 
 CORS_ALLOW_ALL_ORIGINS = True
